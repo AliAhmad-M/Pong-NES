@@ -5,7 +5,7 @@ LOAD_SPRITES:
     STA $0200, x    ; Store sprite data
     
     INX
-    CPX #$2C        ; No. of sprites * 4 bytes
+    CPX #$34        ; No. of sprites * 4 bytes
     BNE LOAD_SPRITES_LOOP
   
   RTS

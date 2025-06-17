@@ -1,4 +1,5 @@
 .include "delay_timer.asm"
+.include "score_point.asm"
 
 ; +ve x | +ve y, -ve x | +ve y, +ve x | -ve y, -ve x | -ve y
 VELOCITES_X:
@@ -46,12 +47,26 @@ MOV_BALL:
     
     ; Reset ball position if out of bounds
     CMP #LEFT_WALL
-    BCC RESET_BALL_POS
+    BCC PLAYER_2_SCORE
 
     CMP #RIGHT_WALL
-    BCS RESET_BALL_POS
+    BCS PLAYER_1_SCORE
 
     JMP HANDLE_PADDLES
+
+    PLAYER_1_SCORE:
+      LDX $022D ; Player 1 score sprite index
+      JSR SCORE_POINT
+
+      STA $022D ; Store the new sprite index
+      JMP RESET_BALL_POS
+
+    PLAYER_2_SCORE:
+      LDX $0231 ; Player 2 score sprite index
+      JSR SCORE_POINT
+
+      STA $0231 ; Store the new sprite index
+      JMP RESET_BALL_POS
 
     RESET_BALL_POS:
       ; Reset X position
