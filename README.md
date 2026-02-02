@@ -1,1 +1,1 @@
-Work in progress
+Very basic pong clone for the NES
