@@ -1,10 +1,6 @@
 # NES Pong
 
-Two-player Pong for the Nintendo Entertainment System, written in 6502 assembly for the ca65 assembler. It runs in any NES emulator.
-
-Each player has a paddle and a score digit at the top of the screen. The ball is served from the center after every point and cycles through the four diagonal directions in a fixed order. There is no sound, no menu and no computer opponent.
-
-A step-by-step write-up of how the code works is on my blog: [Writing Games for the Nintendo Entertainment System (1985)](https://aliahmadm.vercel.app/blog/nes-pong).
+Two-player Pong for the Nintendo Entertainment System, written in 6502 assembly for the ca65 assembler. It runs in any NES emulator. A step-by-step write-up of how the code works is on my blog: [Writing Games for the Nintendo Entertainment System (1985)](https://aliahmadm.vercel.app/blog/nes-pong).
 
 ## Controls
 
