@@ -39,28 +39,3 @@ game.nes
 ```
 
 The last line opens the ROM with whatever program Windows has associated with `.nes` files, so set that to your emulator or start it by hand. The `game.dbg` file lets emulators that understand cc65 debug info, such as Mesen, show labels instead of raw addresses. On Linux or macOS, the same commands work in a shell script. Replace the backslash in the `del` line with a forward slash and use `rm`.
-
-## Project layout
-
-```
-assets/
-  charset.chr          tile graphics: ball, paddle, digits 0-9
-  bgrnd.nam            background nametable
-src/
-  main.asm             reset routine, NMI handler, vectors
-  vblankwait.asm       wait for vblank
-  common/
-    header.inc         iNES header
-    constants.inc      register addresses and wall positions
-    zeropage.inc       game variables
-  palettes/            palette loading and color data
-  nametable/           background loading
-  sprites/             sprite data and the loader that copies it to RAM
-  controller/          reading controller 1 and 2
-  game/
-    paddle_1.asm       paddle movement for player 1
-    paddle_2.asm       paddle movement for player 2
-    pong_ball.asm      ball movement, wall bounces, scoring, serving
-    delay_timer.asm    pause between a point and the next serve
-    score_point.asm    increments a score digit
-```
