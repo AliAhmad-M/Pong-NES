@@ -11,9 +11,7 @@ Both players use a standard NES controller.
 | Up     | Move paddle up |
 | Down   | Move paddle down |
 
-Player 1 uses the controller in port 1 and plays the left paddle. Player 2 uses port 2 and plays the right paddle. Most emulators map port 2 to a second keyboard layout or a second gamepad, so check the input settings if the right paddle doesn't respond.
-
-A point is scored when the ball passes the opposite side of the screen. Scores stop counting at 9. There is no winning condition.
+Player 1 uses the controller in port 1 and plays the left paddle. Player 2 uses port 2 and plays the right paddle. **Note:** Scores stop counting at 9. There is no winning condition.
 
 ## Requirements
 
